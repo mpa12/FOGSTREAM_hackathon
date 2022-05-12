@@ -1,21 +1,25 @@
 @font-face {
-	font-family: 'Hauss';
+	font-family: 'ALS Hauss';
 	src: url(../fonts/hauss.ttf);
 }
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Hauss';
+	font-family: 'ALS Hauss';
 }
 
 html {
 	scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+h1 {
+	font-weight: 900 !important;
 }
 
 body {
@@ -138,7 +142,6 @@ header {
 }
 
 .hello__left h1 {
-	font-weight: 850;
 	font-size: 100px;
 }
 
@@ -204,7 +207,38 @@ header {
 	height: auto;
 }
 
+/* concept */
+
+.concept {
+	display: flex;
+	padding: 50px 0 0 0;
+	flex-wrap: wrap;
+}
+
+.concept__text p {
+	padding: 20px 0 !important;
+	border-bottom: 1px solid transparent;
+	border-image: linear-gradient(90deg, #a563ff, #6760ff);
+	-moz-border-image: -moz-linear-gradient(90deg, #a563ff, #6760ff);
+	-webkit-border-image: -webkit-linear-gradient(90deg, #a563ff, #6760ff);
+	border-image-slice: 1;
+}
+
+.concept__text a {
+	margin-top: 20px;
+}
+
+.concept img {
+	width: 100%;
+	height: auto;
+}
+
 /* global */
+
+.title {
+	font-size: 50px !important;
+	text-align: center;
+}
 
 .dark-bg {
 	background-color: #0d1117 !important;
@@ -235,7 +269,24 @@ header {
 	cursor: pointer;
 }
 
-.btn-1:hover {
+.btn-2 {
+	padding: 10px 15px;
+	background: linear-gradient(90deg, #a563ff, #6760ff);
+	color: #fff;
+	font-size: 24px;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	transition: all .3s ease-in-out;
+	cursor: pointer;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+	color: #fff;
+	text-decoration: none;
 	filter: brightness(.7);
 }
 
@@ -244,6 +295,12 @@ header {
 }
 
 /* media */
+
+@media (max-width: 1200px) {
+	.hello__left h1 {
+		line-height: 95px;
+	}
+}
 
 @media (max-width: 991px) {
 	.hello {
@@ -256,22 +313,39 @@ header {
 		align-items: center;
 	}
 
-	.hello__left h1 {
-		line-height: 95px;
+	.btn-1 {
+		padding: 10px 50px;
 	}
 
-	.btn-1 {
+	.btn-1,
+	.btn-2 {
+		text-align: center;
 		font-size: 20px;
-		padding: 10px 50px;
 	}
 
 	.benefits__card:nth-child(3),
 	.benefits__card:nth-child(4) {
 		margin-top: 80px;
 	}
+
+	.title {
+		font-size: 40px !important;
+	}
+
+	.concept__img {
+		display: none;
+	}
+
+	.concept:last-child {
+		padding: 0;
+	}
+
+	.concept__text a {
+		width: 100%;
+	}
 }
 
-@media (max-width: 432px) {
+@media (max-width: 460px) {
 	.benefits__wrapper {
 		height: calc(100% + 30px);
 	}
