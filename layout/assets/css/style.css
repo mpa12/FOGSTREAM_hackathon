@@ -1,6 +1,13 @@
 @font-face {
 	font-family: 'ALS Hauss';
 	src: url(../fonts/hauss.ttf);
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'ALS Hauss';
+	src: url(../fonts/ALSHauss-Black.ttf);
+	font-weight: 900;
 }
 
 * {
@@ -253,6 +260,12 @@ header {
 	background: linear-gradient(90deg, #a563ff, #6760ff);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.gradient-span {
+	background: linear-gradient(90deg, #a563ff, #6760ff);
+	padding: 0 3px;
+	border-radius: 5px;
 }
 
 .btn-1 {
