@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	let change_px = 0;
 	let min_margin = 0;
 
-	let down_list = ["mousedown", "touchstart"];
 	partners.addEventListener("mousedown", (e) => {
 		mouse_down = true;
 		event.preventDefault();
@@ -34,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	partners.addEventListener("mousemove", (e) => {
 		if (mouse_down) {
-			now_px = e.targetTouches.screenX;
+			now_px = e.pageX;
 			difference_px = (first_px - now_px) * (-1);
 			change_px = partners_marginLeft + difference_px;
 			if (change_px <= 0 && change_px >= min_margin) {
@@ -65,6 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
 				partners_child.style.marginLeft = change_px + 'px';
 			}
 		}
-		console.log(now_px)
 	}, true)
 });
