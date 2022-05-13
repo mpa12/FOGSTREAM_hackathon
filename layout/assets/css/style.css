@@ -307,6 +307,30 @@ header {
 	width: 100%;
 }
 
+/* participation */
+
+.participation {
+	padding-top: 50px !important;
+}
+
+.participation .benefits__card {
+	margin-top: 80px;
+}
+
+.participation .benefits__card:nth-child(2),
+.participation .benefits__card:nth-child(3) {
+	margin-top: 100px;
+}
+
+.participation__number {
+	background: none !important;
+}
+
+.participation__number h2 {
+	font-size: 100px;
+	font-weight: 900;
+}
+
 /* global */
 
 .title {
@@ -426,6 +450,10 @@ header {
 
 	.cases__card:nth-child(3) {
 		margin-top: 30px;
+	}
+
+	.participation .benefits__card:nth-child(3) {
+		margin-top: 80px;
 	}
 }
 
