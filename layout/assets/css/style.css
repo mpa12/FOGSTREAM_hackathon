@@ -401,6 +401,35 @@ header {
 	padding: 5px 10px;
 }
 
+/* partners */
+
+.partners {
+	margin-top: 50px;
+	height: 150px;
+	background-color: #393c3f;
+	box-sizing: border-box;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.partners div {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	gap: 20px;
+}
+
+.partners img {
+	height: 100%;
+	width: auto;
+	filter: grayscale(100%);
+	transition: all .3s ease-in-out;
+}
+
+.partners img:hover {
+	filter: grayscale(0);
+}
+
 /* global */
 
 .title {
