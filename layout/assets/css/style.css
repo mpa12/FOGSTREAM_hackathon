@@ -331,6 +331,76 @@ header {
 	font-weight: 900;
 }
 
+/* dates */
+
+.dates {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.dates__line {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50px !important;
+}
+
+.dates__line span {
+	width: 3px;
+	height: 100%;
+	background-color: #fff;
+	position: absolute;
+}
+
+.date {
+	display: flex;
+}
+
+.date .dates__line {
+	flex-grow: 1;
+	overflow: hidden;
+	padding: 0 calc(50% - 1.5px);
+}
+
+.date .dates__line span {
+	flex-grow: 1;
+	position: relative;
+}
+
+.date__logo {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.date__logo img {
+	width: 100%;
+	height: auto;
+	filter: invert(100%);
+}
+
+.date__text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.date__text h2 {
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.date__text p {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.date__text a {
+	font-size: 20px;
+	padding: 5px 10px;
+}
+
 /* global */
 
 .title {
