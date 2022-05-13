@@ -65,4 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 	}, true)
+
+	window.addEventListener('resize', function(event) {
+		partners_child.style.marginLeft = '0px';
+	}, true);
 });
