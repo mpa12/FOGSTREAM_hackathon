@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-
 	partners.addEventListener("touchstart", function(e) { 
 		mouse_down = true;
 		event.preventDefault();
