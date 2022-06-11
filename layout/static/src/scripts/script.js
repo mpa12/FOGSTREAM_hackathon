@@ -8,6 +8,7 @@ function open_menu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+	let window_height = window.innerHeight;
 	let partners = document.getElementById('partners');
 	let partners_child = document.getElementById('partners_child');
 
@@ -67,5 +68,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	window.addEventListener('resize', function(event) {
 		partners_child.style.marginLeft = '0px';
+		window_height = window.innerHeight;
+	}, true);
+
+	// animate
+	window.addEventListener('scroll', function(event) {
+		let animate_list = document.getElementsByClassName('js_animate');
+		for (var i = animate_list.length - 1; i >= 0; i--) {
+			el = animate_list[i].getBoundingClientRect();
+			el_top = el.top;
+			el_bottom = el.bottom;
+			if (!((el_top <= 0 || el_top >= window_height) && (el_bottom <= 0 || el_bottom >= window_height))) {
+				class_name = animate_list[i].dataset.animate;
+				if (!(animate_list[i].classList.contains(class_name))) {
+					animate_list[i].classList.add(class_name);
+				}
+			} else {
+				class_name = animate_list[i].dataset.animate;
+				if (animate_list[i].classList.contains(class_name)) {
+					animate_list[i].classList.remove(class_name);
+				}
+			}
+		}
 	}, true);
 });
