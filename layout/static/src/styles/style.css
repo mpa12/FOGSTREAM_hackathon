@@ -537,6 +537,41 @@ header {
 	content: "-";
 }
 
+.faq_desc {
+	width: 100%;
+	border: 1px solid white;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/* mentors */
+
+.mentors .case {
+	min-height: 200px;
+}
+
+/* consultation */
+
+.consultation__form {
+	width: 100%;
+}
+
+.consultation__form p,
+.consultation__form button {
+	width: 100%;
+}
+
+.consultation__form input,
+.consultation__form textarea {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: var(--main-bg-color);
+	color: white;
+	border: 1px solid white;
+}
+
 /* footer */
 
 .footer__wrapper {
@@ -732,6 +767,10 @@ header {
 	padding: 50px 0;
 }
 
+.mt-30 {
+	margin-top: 30px;
+}
+
 /* media */
 
 @media (max-width: 1200px) {
@@ -788,6 +827,14 @@ header {
 
 	.cases__card:nth-child(3) {
 		margin-top: 30px;
+	}
+
+	.mentors .cases__card {
+		margin-top: 30px;
+	}
+
+	.mentors .cases__card:first-child {
+		margin-top: 0;
 	}
 
 	.participation .benefits__card {
