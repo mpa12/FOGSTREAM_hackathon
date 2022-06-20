@@ -791,6 +791,10 @@ header {
 		align-items: center;
 	}
 
+	.main__right {
+		flex-grow: 1;
+	}
+
 	.btn-1 {
 		padding: 10px 50px;
 	}
