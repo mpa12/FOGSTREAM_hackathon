@@ -77,6 +77,7 @@ header {
 	font-size: 30px;
 	font-weight: 850;
 	user-select: none;
+	cursor: pointer;
 }
 
 .header__menu div {
